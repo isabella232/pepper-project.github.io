@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta name="keywords" content="verifiable,verified,verified computation,verifiable compuation,outsourced computation,third-party computing,PCP,probabilistically-checkable proofs,arguments,interactive proofs,IPs" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <title>Pepper: toward practical verifiable computation</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="container">
+        <!--fixed navbar on top of the page-->
+        <div class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="index.htm">
+                  <span>Pepper: toward practical verifiable computation</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="sidebar col-xs-3">
+            <div class="container">
+              <ul id="nav-tab" class="nav sidenav affix">
+                <li class="">
+                <a class="tab-toggle" href="index.htm">Home</a>
+                </li>
+                <li>
+                  <a class="collapse-toggle" href="what-is-pepper.htm">About <span class="down-caret"></span></a>
+                  <ul id="about-collapse" class="collapse">
+                    <li class=""><a class="tab-toggle" href="what-is-pepper.htm">What is Pepper?</a></li>
+                    <li class=""><a class="tab-toggle" href="our-approach.htm">Approach and research</a></li>
+                    <li class=""><a class="tab-toggle" href="summary-results.htm">Summary of results</a></li>
+                    <li class=""><a class="tab-toggle" href="summary-systems.htm">Built systems</a></li>
+                    <li class=""><a class="tab-toggle" href="summary-perf.htm">Performance</a></li>
+                  </ul>
+                </li >
+                <li class=""><a class="tab-toggle" href="publications.htm">Publications</a></li>
+                <li class=""><a class="tab-toggle" href="talks.htm">Presentations</a></li>
+                <li class=""><a class="tab-toggle" href="tutorials.htm">Tutorials</a></li>
+                <li class=""><a class="tab-toggle" href="people.htm">People</a></li>
+                <li class=""><a class="tab-toggle" href="related.htm">Related projects</a></li>
+                <li class="active"><a class="tab-toggle" href="source.htm">Source code</a></li>
+                <li class=""><a class="tab-toggle" href="funding.htm">Funding and support</a></li>
+                <li class=""><a class="tab-toggle" href="contact.htm">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <!--content for each tab -->
+          <div class="tab-content col-xs-9">
+            <div class="my-tab-pane" id="source">
+  <div class="content">
+    <div class="descriptive">
+      <p>Source code for all of our built <a
+        href="summary-systems.htm">systems</a> is available online, under a BSD-style license.
+        In addition, we provide full re-implementations of
+        most of the <a href="related.htm">related systems</a>;
+        this facilitates performance comparisons.</p>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <b>Implemented systems</b>
+          </div>
+          <div class="panel-body">
+            <p>We maintain a <a href="https://github.com/pepper-project/pepper">github repository</a>
+            with our latest released code.
+            For experimenting or building on our work, we suggest using this release.
+            We also maintain a slightly simplified (but still feature-rich) codebase,
+            <a href="https://github.com/pepper-project/pequin/">Pequin</a>.
+            If you want to get started quickly, Pequin is a good choice.
+
+            <p>We also provide snapshots of our systems at the time of publication, useful
+            for reproducing our results:</p>
+            <ul>
+                <li>Hyrax (<a href="https://github.com/hyraxZK">link</a>)</li>
+
+                <li>Giraffe (<a href="https://github.com/pepper-project/giraffe">link</a>)</li>
+
+                <li>Zebra (<a href="https://github.com/pepper-project/zebra">link</a>)</li>
+
+                <li>Buffet (<a href="https://github.com/pepper-project/releases/blob/master/buffet.tar.gz?raw=true">link</a>)</li>
+
+                <li>Pantry (<a href="https://github.com/pepper-project/releases/blob/master/pantry.tar.gz?raw=true">link</a>)</li>
+
+                <li>Zaatar (<a href="https://github.com/pepper-project/releases/blob/master/zaatar.tar.gz?raw=true">link</a>)</li>
+
+                <li>Allspice and Ginger (<a href="https://github.com/pepper-project/releases/blob/master/ginger-allspice.tar.gz?raw=true">link</a>)</li>
+
+                <li>Pepper (<a href="https://github.com/pepper-project/releases/blob/master/pepper.tar.gz?raw=true">link</a>)</li>
+            </ul>
+
+            <p>Our systems rely on a number of third-party packages. 
+            We provide an <a href="https://github.com/pepper-project/thirdparty">archive</a>
+            of versions of these packages that are known to work with our system.</p>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <b>Re-implementations of related systems</b>
+          </div>
+          <div class="panel-body">
+            <ul>
+                <li>CMT (included with Allspice and in our latest development branch)</li>
+
+                <li>Pinocchio (included with Pantry, Pantry-enhanced, Buffet, and our latest development branch)</li>
+
+                <li>TinyRAM (<a href="https://github.com/pepper-project/tinyram">link</a>; also included with Buffet and as a git submodule in our latest development branch)</li>
+             </ul>
+          </div>
+        </div>
+
+        <p>HOWTOs are included with all of the source
+        code.</p>
+
+        <p>Please contact srinath at cs dot utexas dot edu for questions, updates, and bug
+        fixes.</p>
+    </div>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.js" ></script>
+    
+    
+  </body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta name="keywords" content="verifiable,verified,verified computation,verifiable compuation,outsourced computation,third-party computing,PCP,probabilistically-checkable proofs,arguments,interactive proofs,IPs" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <title>Pepper: toward practical verifiable computation</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="container">
+        <!--fixed navbar on top of the page-->
+        <div class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="index.htm">
+                  <span>Pepper: toward practical verifiable computation</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="sidebar col-xs-3">
+            <div class="container">
+              <ul id="nav-tab" class="nav sidenav affix">
+                <li class="">
+                <a class="tab-toggle" href="index.htm">Home</a>
+                </li>
+                <li>
+                  <a class="collapse-toggle" href="what-is-pepper.htm">About <span class="down-caret"></span></a>
+                  <ul id="about-collapse" class="collapse">
+                    <li class=""><a class="tab-toggle" href="what-is-pepper.htm">What is Pepper?</a></li>
+                    <li class=""><a class="tab-toggle" href="our-approach.htm">Approach and research</a></li>
+                    <li class=""><a class="tab-toggle" href="summary-results.htm">Summary of results</a></li>
+                    <li class=""><a class="tab-toggle" href="summary-systems.htm">Built systems</a></li>
+                    <li class=""><a class="tab-toggle" href="summary-perf.htm">Performance</a></li>
+                  </ul>
+                </li >
+                <li class=""><a class="tab-toggle" href="publications.htm">Publications</a></li>
+                <li class=""><a class="tab-toggle" href="talks.htm">Presentations</a></li>
+                <li class=""><a class="tab-toggle" href="tutorials.htm">Tutorials</a></li>
+                <li class=""><a class="tab-toggle" href="people.htm">People</a></li>
+                <li class="active"><a class="tab-toggle" href="related.htm">Related projects</a></li>
+                <li class=""><a class="tab-toggle" href="source.htm">Source code</a></li>
+                <li class=""><a class="tab-toggle" href="funding.htm">Funding and support</a></li>
+                <li class=""><a class="tab-toggle" href="contact.htm">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <!--content for each tab -->
+          <div class="tab-content col-xs-9">
+            <div class="my-tab-pane" id="related">
+  <div class="content">
+    <div class="descriptive">
+      <p>For an overview of the research space, see:</p>
+      <ul>
+          <li>this <a
+          href="http://dl.acm.org/citation.cfm?id=2728770.2641562">survey
+          article</a></li>
+          <li>this <a href="http://mybiasedcoin.blogspot.com/2013/09/guest-post-by-justin-thaler-mini-survey.html">blog post</a></li>
+          <li>this <a href="http://research.microsoft.com/apps/video/dl.aspx?id=199523">video</a> (this is a session on verifiable
+              computation at the 2013 Microsoft Research Faculty Summit, hosted by Bryan Parno)</li>
+          </ul>
+
+          <p>We know of three projects that are related to ours:</p>
+          <ul>
+            <li>
+            <div class="bullet">
+              <div class="bullet-heading">
+                <b>CMT</b> [see <a
+                        href="http://dl.acm.org/citation.cfm?id=2090245">here</a> and
+                <a href="http://people.seas.harvard.edu/~jthaler/">here</a>]<br/>
+              </div>
+              <div class="bullet-body">
+                Refines a non-cryptographic interactive proof protocol. Can achieve 
+                <a href="http://people.seas.harvard.edu/~jthaler/TimeOptimalIPs.html">much lower overhead</a> than the other approaches
+                but requires that computations be naturally
+                parallelizable.
+              </div>
+            </div>
+            </li>
+
+            <li>
+            <div class="bullet">
+              <div class="bullet-heading">
+                <b>GGPR and Pinocchio</b> [<a href="http://research.microsoft.com/en-us/projects/verifcomp/">project page</a>]
+                <br/>
+              </div>
+              <div class="bullet-body">
+                Introduces the remarkable QAP/QSP encoding, which is borrowed by many of the projects in the area. 
+                Pinocchio and <a class="cross-tab-toggle" href="summary-systems.htm#zaatar">Zaatar</a>
+                have similar performance
+                except that Pinocchio has much better amortization behavior.
+                <!-- (roughly, Pinocchio requires per-computation setup work
+                while Zaatar must pay that cost per-batch).-->
+              </div>
+            </div>
+            </li>
+            <li>
+            <div class="bullet">
+              <div class="bullet-heading">
+                <b>BCTV, BCGTV, and TinyRAM</b> [<a href="http://www.scipr-lab.org/">project page</a>]
+                <br/>
+              </div>
+              <div class="bullet-body">
+                Introduces an <a
+                href="http://dl.acm.org/citation.cfm?id=2422481">innovative
+                program representation</a> and combines it with an optimized
+                implementation of Pinocchio's verification engine.
+                This approach brings excellent programmability (enabling
+                support of the full C programming language) and
+                the best amortization behavior in the literature but 
+                overhead is very high.
+                Compared to <a class="cross-tab-toggle"
+                href="summary-systems.htm#buffet">Buffet</a>, for
+                example,
+                programmability is slightly better
+                but performance is orders of magnitude worse. 
+              </div>
+            </div>
+            </li>
+          </ul>
+          <p>For a quick performance comparison, based on <a href="source.htm">re-implementations</a>
+        of many of the systems, see <a
+        href="http://research.microsoft.com/en-us/UM/redmond/events/fs2013/presentations/Michael-Walfish_EfficientlyVerifying.pptx">this
+        presentation</a> (accompanies the Microsoft Faculty Summit video
+        above). Also, the <a class="cross-tab-toggle"
+                href="summary-systems.htm#buffet">Buffet</a>
+                paper contains a careful, apples-to-apples performance comparison
+                of BCTV and 
+                <a class="cross-tab-toggle"
+                href="summary-systems.htm#pantry">Pantry</a>
+                (and by extension, Pinocchio and 
+                <a class="cross-tab-toggle"
+                href="summary-systems.htm#zaatar">Zaatar</a>).
+                
+
+    </div>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.js" ></script>
+    
+    
+  </body>
+</html>

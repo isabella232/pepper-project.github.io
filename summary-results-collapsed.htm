@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta name="keywords" content="verifiable,verified,verified computation,verifiable compuation,outsourced computation,third-party computing,PCP,probabilistically-checkable proofs,arguments,interactive proofs,IPs" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <title>Pepper: toward practical verifiable computation</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="container">
+        <!--fixed navbar on top of the page-->
+        <div class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="index.htm">
+                  <span>Pepper: toward practical verifiable computation</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="sidebar col-xs-3">
+            <div class="container">
+              <ul id="nav-tab" class="nav sidenav affix">
+                <li class="">
+                <a class="tab-toggle" href="index.htm">Home</a>
+                </li>
+                <li>
+                  <a class="collapse-toggle" href="what-is-pepper.htm">About <span class="down-caret"></span></a>
+                  <ul id="about-collapse" class="collapse">
+                    <li class=""><a class="tab-toggle" href="what-is-pepper.htm">What is Pepper?</a></li>
+                    <li class=""><a class="tab-toggle" href="our-approach.htm">Approach and research</a></li>
+                    <li class="active"><a class="tab-toggle" href="summary-results.htm">Summary of results</a></li>
+                    <li class=""><a class="tab-toggle" href="summary-systems.htm">Built systems</a></li>
+                    <li class=""><a class="tab-toggle" href="summary-perf.htm">Performance</a></li>
+                  </ul>
+                </li >
+                <li class=""><a class="tab-toggle" href="publications.htm">Publications</a></li>
+                <li class=""><a class="tab-toggle" href="talks.htm">Presentations</a></li>
+                <li class=""><a class="tab-toggle" href="tutorials.htm">Tutorials</a></li>
+                <li class=""><a class="tab-toggle" href="people.htm">People</a></li>
+                <li class=""><a class="tab-toggle" href="related.htm">Related projects</a></li>
+                <li class=""><a class="tab-toggle" href="source.htm">Source code</a></li>
+                <li class=""><a class="tab-toggle" href="funding.htm">Funding and support</a></li>
+                <li class=""><a class="tab-toggle" href="contact.htm">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <!--content for each tab -->
+          <div class="tab-content col-xs-9">
+            <div class="my-tab-pane active" id="summary-results">
+  <div class="content">
+    <div class="descriptive">
+      <h3>Summary of Pepper&rsquo;s results so far</h3>
+      <p>Our line of work on
+      <a href="pepper-ndss12.pdf">Pepper</a>, <a href="ginger-usec12-v2.pdf">Ginger</a>, and <a href="zaatar-eurosys13.pdf">Zaatar</a> has instantiated an
+      <i>argument system</i> (an interactive protocol that assumes a
+      computationally bounded prover) due to Ishai, Kushilevitz, and Ostrovsky (CCC 2007),
+      in <a
+        href="http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=4262770">this
+        paper</a> (also available <a
+        href="http://www.cs.ucla.edu/~rafail/PUBLIC/79.pdf">here</a>).
+      Through theoretical and practical refinements, we have reduced the
+      cost of this argument system by a factor of roughly 10<sup>20</sup> (seriously).</p>
+
+      <p>In another line of work, <a href="allspice-oakland13.pdf">Allspice</a>, we have built on an <a
+        href="http://dl.acm.org/citation.cfm?id=1374396">interactive proof
+        system</a> due to Goldwasser, Kalai, and Rothblum (STOC 2008), and 
+      <a href="http://arxiv.org/abs/1105.2003">refined and implemented</a> by Cormode, Mitzenmacher, and
+      Thaler (ITCS 2012). One of the chief advantages of this
+      line of work is that it avoids expensive cryptographic operations.</p>
+
+      <p>One might wonder: which protocol is &ldquo;best&rdquo;? Our experience has
+      been that it depends on the computation. Accordingly, Allspice
+      includes a compiler that takes as input a high-level programming language and
+      performs static analysis to compile to the best available 
+      protocol for that computation.</p>
+
+      <p>In the above works, the computational model does not support
+      <i>stateful</i> computations, namely those that work over RAM, or
+      computations for which the verifier does not have the full input. 
+      In <a href="pantry-sosp13.pdf">Pantry</a>, we overcome this
+      limitation, and apply the verification machinery to MapReduce jobs,
+      queries against remote databases, and applications for which the
+      prover&rsquo;s state is private.</p>
+
+      <p><a href="summary-systems.htm">Here</a> is a system-by-system
+      description.</p>
+
+    </div>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.js" ></script>
+    
+    
+  </body>
+</html>

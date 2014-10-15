@@ -1,0 +1,310 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta name="keywords" content="verifiable,verified,verified computation,verifiable compuation,outsourced computation,third-party computing,PCP,probabilistically-checkable proofs,arguments,interactive proofs,IPs" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <title>Pepper: toward practical verifiable computation</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="container">
+        <!--fixed navbar on top of the page-->
+        <div class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="index.htm">
+                  <span>Pepper: toward practical verifiable computation</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="sidebar col-xs-3">
+            <div class="container">
+              <ul id="nav-tab" class="nav sidenav affix">
+                <li class="">
+                <a class="tab-toggle" href="index.htm">Home</a>
+                </li>
+                <li>
+                  <a class="collapse-toggle" href="what-is-pepper.htm">About <span class="down-caret"></span></a>
+                  <ul id="about-collapse" class="collapse">
+                    <li class=""><a class="tab-toggle" href="what-is-pepper.htm">What is Pepper?</a></li>
+                    <li class=""><a class="tab-toggle" href="our-approach.htm">Approach and research</a></li>
+                    <li class=""><a class="tab-toggle" href="summary-results.htm">Summary of results</a></li>
+                    <li class="active"><a class="tab-toggle" href="summary-systems.htm">Built systems</a></li>
+                    <li class=""><a class="tab-toggle" href="summary-perf.htm">Performance</a></li>
+                  </ul>
+                </li >
+                <li class=""><a class="tab-toggle" href="publications.htm">Publications</a></li>
+                <li class=""><a class="tab-toggle" href="talks.htm">Presentations</a></li>
+                <li class=""><a class="tab-toggle" href="tutorials.htm">Tutorials</a></li>
+                <li class=""><a class="tab-toggle" href="people.htm">People</a></li>
+                <li class=""><a class="tab-toggle" href="related.htm">Related projects</a></li>
+                <li class=""><a class="tab-toggle" href="source.htm">Source code</a></li>
+                <li class=""><a class="tab-toggle" href="funding.htm">Funding and support</a></li>
+                <li class=""><a class="tab-toggle" href="contact.htm">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <!--content for each tab -->
+          <div class="tab-content col-xs-9">
+            <div class="my-tab-pane active" id="summary-systems">
+  <div class="content">
+    <div class="descriptive">
+      <h3>Built systems under the Pepper project</h3>
+
+      <p>In the descriptions below, the <i>prover</i> is the
+      entity that performs a computation.  The
+      <i>verifier</i> checks a proof (produced by the
+      prover) that the computation was performed
+      correctly.</p>
+
+      <div class="panel panel-default" id="pepper">
+        <div class="panel-heading">
+          <b>Pepper</b>
+        </div>
+
+        <div class="panel-body">       
+          <a href="pepper-ndss12.pdf">Pepper</a> is the first system to challenge the folklore that
+          PCP-derived machinery is impractical. Pepper implements an <span
+            class="text-emphasis">efficient argument system</span> based on a
+          protocol of <a href="http://www.cs.ucla.edu/~rafail/PUBLIC/79.pdf">Ishai et al., CCC 2007</a>, and incorporates new
+          theoretical work to improve performance by 20 orders of magnitude.
+          Pepper is implemented and experimentally evaluated, and is arguably
+          practical for some computations and in some regimes. 
+<!--                      More generally,
+          Pepper illustrates that, as a tool for building secure systems, PCPs
+          are not a lost cause. -->
+          <br/>
+          <div class="cite"> S. Setty, R. McPherson, A. J.
+          Blumberg, and M. Walfish, &ldquo;Making argument
+          systems for outsourced computation practical
+          (sometimes)&rdquo;, Network &amp; Distributed
+          System Security Symposium (NDSS), February 2012.
+          [<a href="pepper-ndss12.pdf">pdf</a>]
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default" id="ginger">
+        <div class="panel-heading">
+          <b>Ginger</b>
+        </div>
+
+        <div class="panel-body">       
+          <a href="ginger-usec12-v2.pdf">Ginger</a> is based on Pepper. It slashes query costs via
+          further refinements. In addition, Ginger broadens the
+          computational model to include (primitive) floating-point
+          fractions, inequality comparisons, logical operations, and
+          conditional control flow. Ginger also includes a parallel
+          GPU-based implementation, and a compiler that transforms
+          computations expressed in a high-level language to
+          executables that implement the protocol entities.
+          <br/>
+          <div class="cite"> S. Setty, V. Vu, N. Panpalia,
+          B. Braun, A. J. Blumberg, and M. Walfish,
+          &ldquo;Taking proof-based verified computation a
+          few steps closer to practicality&rdquo;, USENIX
+          Security Symposium, August 2012.  [<a
+          href="ginger-usec12-v2.pdf">pdf</a> (corrected)]
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default" id="zaatar">
+        <div class="panel-heading">
+          <b>Zaatar</b>
+        </div>
+
+        <div class="panel-body">       
+          <a href="zaatar-eurosys13.pdf">Zaatar</a> addresses a limitation in Ginger, namely that
+          avoiding immense work for the prover requires
+          computation-specific tailoring of the protocols. Zaatar is
+          built on our observation that the <a
+              href="http://eprint.iacr.org/2012/215">QAPs of Gennaro et al., EUROCRYPT 2013</a>
+          yield a linear PCP that works with the
+          Ginger/Pepper/IKO framework and is (relatively) efficient for the prover.
+          The consequence is a prover whose total work is not much
+          more than linear in the running time of the computation (and
+          does not require special-purpose tailoring).
+          <br/>
+          <div class="cite"> S. Setty, B. Braun, V. Vu, A.
+          J. Blumberg, B. Parno, and M. Walfish,
+          &ldquo;Resolving the conflict between generality
+          and plausibility in verified computation&rdquo;,
+          ACM European Conference on Computer Systems
+          (EuroSys), April 2013. [<a
+          href="zaatar-eurosys13.pdf">pdf</a>] </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default" id="allspice">
+        <div class="panel-heading">
+          <b>Allspice</b>
+        </div>
+
+        <div class="panel-body">       
+          <a href="allspice-oakland13.pdf">Allspice</a> addresses a key
+          limitation of prior work for verifying computations: either it
+          relies on cryptography, which carries an expense (as with Zaatar,
+          Ginger, Pepper, and IKO), or else it applies to a restricted class
+          of computations (as with work by <a href="http://dl.acm.org/citation.cfm?id=2090245">Cormode et al., ITCS 2012</a>, which
+          builds on an interactive proof system of <a href="http://dl.acm.org/citation.cfm?id=1374396">Goldwasser et al., STOC
+          2008</a>). Allspice optimizes the non-cryptographic
+          protocols and extends them to a much larger class of computations.
+          Allspice also uses static analysis to compile an input program to
+          the best verification machinery for that program.
+          <br/>
+          <div class="cite">
+          V. Vu, S. Setty, A. J. Blumberg, and M. Walfish,
+          &ldquo;A hybrid architecture for interactive
+          verifiable computation&rdquo;, IEEE Symposium on
+          Security and Privacy (Oakland), May 2013. [<a
+          href="allspice-oakland13.pdf">pdf</a>]
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default" id="pantry">
+        <div class="panel-heading">
+          <b>Pantry</b>
+        </div>
+
+        <div class="panel-body">       
+          <a href="http://eprint.iacr.org/2013/356">Pantry</a> extends
+          verifiable computation to handle <i>stateful</i> computations: those
+          that work over RAM, or computations for which the verifier does not
+          have the full input. Pantry composes techniques from untrusted
+          storage with existing verifiable computation machinery: the
+          verifier&rsquo;s explicit input includes a <i>digest</i> of the full input
+          or state, and the prover is obliged to compute over state that
+          matches the digest. The result is to extend verifiability to real
+          applications of cloud computing (MapReduce jobs, queries against
+          remote databases, applications for which the prover&rsquo;s state is
+          hidden, etc.). Besides the gain in expressiveness, Pantry improves
+          performance: by not handling inputs, the verifier saves CPU and
+          network costs.
+          <br/>
+          <div class="cite">
+          B. Braun, A. J. Feldman, Z. Ren, S. Setty, A. J.
+          Blumberg, and M. Walfish, &ldquo;Verifying
+          computations with state&rdquo;, ACM Symposium on
+          Operating Systems Principles (SOSP), November
+          2013. [<a href="pantry-sosp13.pdf">pdf</a>]
+          </div>
+        </div>
+    </div>
+
+
+    <div class="panel panel-default" id="buffet">
+      <div class="panel-heading">
+        <b>Buffet</b>
+      </div>
+
+      <div class="panel-body">
+        <a href="http://eprint.iacr.org/2014/674">Buffet</a> eliminates what was
+        a problematic cost-programmability tradeoff in this research area. Prior
+        to Buffet, there were two approaches to program representation. One
+        approach, due to <a
+        href="https://eprint.iacr.org/2013/879.pdf">Ben-Sasson et al., Usenix
+        Security 2014</a>, offered excellent programmability (the full C
+        programming language) but substantial overhead. Another approach
+        (embodied by Pantry, <a
+        href="http://research.microsoft.com/en-us/projects/verifcomp/">Pinocchio</a>,
+        and Zaatar) offered much lower overhead but could not handle
+        data-dependent control flow. Buffet takes Pantry as a base and applies
+        static program analysis (including loop flattening) together with an
+        adaptation of BCTV's <a href="https://eprint.iacr.org/2013/507">elegant
+        representation of RAM</a>. Buffet can handle essentially any example in
+        the verifiable computation literature (it supports an expansive subset
+        of C, disallowing only goto and function pointers) and achieves the
+        best performance in the area by multiple orders of magnitude.
+
+        <div class="cite">
+          R. S. Wahby, S. Setty, Z. Ren, A. J. Blumberg, and M. Walfish, "Efficient RAM and control
+          flow in verifiable outsourced computation."
+          Network &amp; Distributed System Security Symposium,
+          <a href="http://www.internetsociety.org/events/ndss-symposium-2015">NDSS
+          2015</a>, February 2015. [<a href="buffet-ndss15.pdf">pdf</a>]<br/>
+          A slightly longer version is available as <a href="https://eprint.iacr.org">Cryptology ePrint</a> <a href="https://eprint.iacr.org/2014/674">2014/674</a>.
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default" id="zebra">
+      <div class="panel-heading"><b>Zebra</b></div>
+      <div class="panel-body">
+        <a href="https://eprint.iacr.org/2015/1243">Zebra</a> instantiates a new model
+            for building trustworthy chips, called Verifiable ASICs.
+        This model uses a high-performance chip from an untrusted (and possibly malicious)
+            hardware vendor to accelerate the computation of a low-performance
+            chip supplied by a trusted vendor, while retaining the latter's trustworthiness.
+        To instantiate the model, Zebra builds on the interactive proofs of
+            <a href="http://dl.acm.org/citation.cfm?id=1374396">GKR</a>,
+            <a href="http://people.seas.harvard.edu/~jthaler/PracticalVerifiedComputation.html">CMT</a>,
+            and <a href="#allspice">Allspice</a>.
+        Zebra demonstrates that, for a class of real computations, the Verifiable ASICs approach
+            reduces costs and improves performance compared to chips built solely by a trusted
+            manufacturer.
+
+        <div class="cite">
+        R. S. Wahby, M. Howald, S. Garg, a. shelat, and M. Walfish, "Verifiable ASICs."
+        IEEE Symposium on Security and Privacy (<a href="http://www.ieee-security.org/TC/SP2016/">Oakland</a>), May 2016.
+        [<a href="zebra-oakland16.pdf">pdf</a>] <em>(Distinguished student paper award.)</em><br/>
+        An extended version is available as <a href="https://eprint.iacr.org">Cryptology ePrint</a> <a href="https://eprint.iacr.org/2015/1243">2015/1243</a>.
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default" id="giraffe">
+      <div class="panel-heading"><b>Giraffe</b></div>
+      <div class="panel-body">
+        <a href="https://eprint.iacr.org/2017/242">Giraffe</a> builds on the
+            Verifiable ASICs model introduced by Zebra.
+        Giraffe removes Zebra's requirement that a trusted entity supply the verifier with
+            an endless stream of precomputations.
+        In doing so, it charges for <em>all</em> protocol costs and makes outsourcing with
+            probabilistic proofs worthwhile for the first time.
+
+        <p> Giraffe includes a new probabilistic proof for data-parallel computations that
+            refines the protocol of <a href="https://arxiv.org/abs/1304.3812">Thaler13</a>
+            to give asymptotically optimal prover cost; this is of independent interest.
+        Giraffe also develops a <em>design template</em> that automatically produces optimized
+            hardware designs for a wide range of computations and circuit technologies.
+        It combines this template with program analysis and compiler techniques that extend
+            the Verifiable ASICs model to a wider range of computations.
+        Compared to Zebra, Giraffe handles computations that are 500&#215; larger, and it can
+            automatically outsource <em>parts</em> of programs that are not worthwhile to
+            outsource in full.
+        </p>
+
+        <div class="cite">
+        R. S. Wahby, Y. Ji, A. J. Blumberg, a. shelat, J. Thaler, M. Walfish, and T. Wies, "Full accounting for verifiable outsourcing."
+        ACM Conference on Computer and Communications Security (<a
+        href="https://www.sigsac.org/ccs/CCS2017/">CCS</a>), October 2017.
+        [<a href="giraffe-ccs17.pdf">pdf</a>]<br/>
+        An extended version is available as <a href="https://eprint.iacr.org">Cryptology ePrint</a> <a href="https://eprint.iacr.org/2017/242">2017/242</a>.
+        </div>
+      </div>
+    </div>
+
+    <a href="summary-perf.htm">Here</a> is a summary of the
+    performance of the above systems.
+    </div>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.js" ></script>
+    
+    
+  </body>
+</html>

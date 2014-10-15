@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta name="keywords" content="verifiable,verified,verified computation,verifiable compuation,outsourced computation,third-party computing,PCP,probabilistically-checkable proofs,arguments,interactive proofs,IPs" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <title>Pepper: toward practical verifiable computation</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="container">
+        <!--fixed navbar on top of the page-->
+        <div class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="index.htm">
+                  <span>Pepper: toward practical verifiable computation</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="sidebar col-xs-3">
+            <div class="container">
+              <ul id="nav-tab" class="nav sidenav affix">
+                <li class="">
+                <a class="tab-toggle" href="index.htm">Home</a>
+                </li>
+                <li>
+                  <a class="collapse-toggle" href="what-is-pepper.htm">About <span class="down-caret"></span></a>
+                  <ul id="about-collapse" class="collapse">
+                    <li class=""><a class="tab-toggle" href="what-is-pepper.htm">What is Pepper?</a></li>
+                    <li class=""><a class="tab-toggle" href="our-approach.htm">Approach and research</a></li>
+                    <li class=""><a class="tab-toggle" href="summary-results.htm">Summary of results</a></li>
+                    <li class=""><a class="tab-toggle" href="summary-systems.htm">Built systems</a></li>
+                    <li class=""><a class="tab-toggle" href="summary-perf.htm">Performance</a></li>
+                  </ul>
+                </li >
+                <li class="active"><a class="tab-toggle" href="publications.htm">Publications</a></li>
+                <li class=""><a class="tab-toggle" href="talks.htm">Presentations</a></li>
+                <li class=""><a class="tab-toggle" href="tutorials.htm">Tutorials</a></li>
+                <li class=""><a class="tab-toggle" href="people.htm">People</a></li>
+                <li class=""><a class="tab-toggle" href="related.htm">Related projects</a></li>
+                <li class=""><a class="tab-toggle" href="source.htm">Source code</a></li>
+                <li class=""><a class="tab-toggle" href="funding.htm">Funding and support</a></li>
+                <li class=""><a class="tab-toggle" href="contact.htm">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <!--content for each tab -->
+          <div class="tab-content col-xs-9">
+            <div class="my-tab-pane" id="publications">
+  <div class="content">
+      <h2>Publications</h2>
+    <ul class="list-group">
+     <li class="list-group-item">
+        <b>Doubly-efficient zkSNARKs without trusted setup</b> [<a href="hyrax-oakland18.pdf">pdf</a>]<br/>
+        Riad S. Wahby, Ioanna Tzialla, abhi shelat, Justin Thaler, and Michael Walfish<br/>
+        IEEE Symposium on Security and Privacy, <a href="https://www.ieee-security.org/TC/SP2018/">Oakland 2018</a>, San Francisco, CA, May 2018.<br/>
+        An extended version is available as <a href="https://eprint.iacr.org/">Cryptology ePrint</a> <a href="https://eprint.iacr.org/2017/1132/">2017/1132</a>.
+     </li>
+     <li class="list-group-item">
+        <b>Full accounting for verifiable outsourcing</b> [<a href="giraffe-ccs17.pdf">pdf</a>]<br/>
+        Riad S. Wahby, Ye Ji, Andrew J. Blumberg, abhi shelat, Justin Thaler, Michael Walfish, and Thomas Wies<br/>
+        ACM Conference on Computer and Communications Security, <a href="https://www.sigsac.org/ccs/CCS2017/">CCS 2017</a>, Dallas, TX, October 2017.<br/>
+        An extended version is available as <a href="https://eprint.iacr.org/">Cryptology ePrint</a> <a href="https://eprint.iacr.org/2017/242/">2017/242</a>.
+     </li>
+     <li class="list-group-item">
+        <b>Verifiable ASICs</b> [<a href="zebra-oakland16.pdf">pdf</a>] <em>(Distinguished student paper award.)</em><br/>
+        Riad S. Wahby, Max Howald, Siddharth Garg, abhi shelat, and Michael Walfish<br/>
+        IEEE Symposium on Security and Privacy, <a href="http://www.ieee-security.org/TC/SP2016/">Oakland 2016</a>, San Jose, CA, May 2016.<br/>
+        An extended version is available as <a href="https://eprint.iacr.org/">Cryptology ePrint</a> <a href="https://eprint.iacr.org/2015/1243/">2015/1243</a>.
+     </li>
+     <li class="list-group-item">
+        <b>Efficient RAM and control flow in verifiable
+        outsourced computation</b> [<a href="buffet-ndss15.pdf">pdf</a>]<br/>
+        Riad S. Wahby, Srinath Setty, Zuocheng Ren, Andrew J. Blumberg,
+        and Michael Walfish <br/>
+        Network &amp; Distributed System Security
+        Symposium, <a href="http://www.internetsociety.org/events/ndss-symposium-2015">NDSS
+        2015</a>, San Diego, CA, February 2015.<br/>
+        A slightly longer version is available as <a href="https://eprint.iacr.org">Cryptology ePrint</a> <a href="https://eprint.iacr.org/2014/674">2014/674</a>.
+      </li>
+      <li class="list-group-item">
+        <b>Verifying computations without reexecuting them: from theoretical possibility to near practicality</b>
+        [<a href="http://dl.acm.org/citation.cfm?id=2641562">link</a>]<br/>
+        Michael Walfish and Andrew J. Blumberg<br/>
+        (<span class="text-emphasis">This survey is written for a
+        general CS audience and is probably a good first paper to
+        read for those curious about the area.</span>)<br/>
+        Communications of the ACM (<a href="http://cacm.acm.org/">CACM</a>),
+        Volume&nbsp;58, Number&nbsp;2, pages&nbsp;74&#x2013;84, February&nbsp;2015.<br/>
+        Prior versions: November&nbsp;2013, July&nbsp;2014.
+        (<a href="http://eccc.hpi-web.de/">ECCC</a> <a href="http://eccc.hpi-web.de/report/2013/165/">TR13-165</a>).<br/>
+      </li>
+      <li class="list-group-item">
+        <b>Verifying computations with state</b>
+        [<a href="pantry-sosp13.pdf">pdf</a>,
+        <a href="http://eprint.iacr.org/2013/356">extended version</a>]<br/>
+        Benjamin Braun, Ariel J. Feldman, Zuocheng Ren, Srinath Setty, Andrew J. Blumberg, and Michael Walfish <br/>
+        ACM Symposium on Operating Systems Principles,
+        <a href="http://sigops.org/sosp/sosp13/">SOSP 2013</a>, Farmington, PA, November 2013
+      </li>
+
+      <li class="list-group-item">
+        <b>A hybrid architecture for interactive verifiable computation</b>
+        [<a href="allspice-oakland13.pdf">pdf</a>]<br/>
+        Victor Vu, Srinath Setty, Andrew J. Blumberg, and Michael Walfish<br/>
+        IEEE Symposium on Security and Privacy, <a href="http://www.ieee-security.org/TC/SP2013/">Oakland 2013</a>,
+        San Francisco, CA, May 2013
+      </li>
+
+      <li class="list-group-item">
+        <b>Resolving the conflict between generality and plausibility in verified computation</b>
+        [<a href="zaatar-eurosys13.pdf">pdf</a>, <a href="http://eprint.iacr.org/2012/622">extended version</a>] <br/>
+        Srinath Setty, Benjamin Braun, Victor Vu,
+        Andrew J. Blumberg, Bryan Parno, and Michael Walfish<br/>
+        ACM European Conference on Computer Systems, <a href="http://eurosys2013.tudos.org/">EuroSys 2013</a>,
+        Prague, Czech Republic, April 2013
+      </li>
+
+      <li class="list-group-item">
+        <b>Taking proof-based verified computation a few steps closer
+        to practicality</b> [<a href="ginger-usec12-v2.pdf">pdf</a> (corrected),
+        <a href="http://eprint.iacr.org/2012/598">extended version</a>] <br/>
+        Srinath Setty, Victor Vu, Nikhil Panpalia, Benjamin Braun, Andrew J. Blumberg, and Michael Walfish <br/>
+        USENIX Security Symposium, <a href="https://www.usenix.org/conference/usenixsecurity12">Security 2012</a>, Bellevue, WA, August 2012
+      </li>
+
+      <li class="list-group-item">
+        <b>Making argument systems for outsourced computation practical (sometimes)</b> [<a href="pepper-ndss12.pdf">pdf</a>]<br/>
+        Srinath Setty, Richard McPherson, Andrew J. Blumberg, and Michael Walfish <br/>
+        Network &amp; Distributed System Security Symposium, <a href="http://www.isoc.org/isoc/conferences/ndss/12/">NDSS 2012</a>,
+        San Diego, CA, February 2012
+      </li>
+
+      <li class="list-group-item">
+        <b>Toward practical and unconditional verification of remote computations</b> [<a href="vercomp-hotos11.pdf">pdf</a>]<br/>
+        Srinath Setty, Andrew J. Blumberg, and Michael Walfish <br/>
+        Workshop on Hot Topics in Operating Systems, <a href="http://www.usenix.org/events/hotos11/">HotOS 2011</a>, Napa Valley, CA, May 2011
+      </li>
+    </ul>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.js" ></script>
+    
+    
+  </body>
+</html>

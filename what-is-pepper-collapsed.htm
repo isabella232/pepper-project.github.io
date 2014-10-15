@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta name="keywords" content="verifiable,verified,verified computation,verifiable compuation,outsourced computation,third-party computing,PCP,probabilistically-checkable proofs,arguments,interactive proofs,IPs" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <title>Pepper: toward practical verifiable computation</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="container">
+        <!--fixed navbar on top of the page-->
+        <div class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="index.htm">
+                  <span>Pepper: toward practical verifiable computation</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="sidebar col-xs-3">
+            <div class="container">
+              <ul id="nav-tab" class="nav sidenav affix">
+                <li class="">
+                <a class="tab-toggle" href="index.htm">Home</a>
+                </li>
+                <li>
+                  <a class="collapse-toggle" href="what-is-pepper.htm">About <span class="down-caret"></span></a>
+                  <ul id="about-collapse" class="collapse">
+                    <li class="active"><a class="tab-toggle" href="what-is-pepper.htm">What is Pepper?</a></li>
+                    <li class=""><a class="tab-toggle" href="our-approach.htm">Approach and research</a></li>
+                    <li class=""><a class="tab-toggle" href="summary-results.htm">Summary of results</a></li>
+                    <li class=""><a class="tab-toggle" href="summary-systems.htm">Built systems</a></li>
+                    <li class=""><a class="tab-toggle" href="summary-perf.htm">Performance</a></li>
+                  </ul>
+                </li >
+                <li class=""><a class="tab-toggle" href="publications.htm">Publications</a></li>
+                <li class=""><a class="tab-toggle" href="talks.htm">Presentations</a></li>
+                <li class=""><a class="tab-toggle" href="tutorials.htm">Tutorials</a></li>
+                <li class=""><a class="tab-toggle" href="people.htm">People</a></li>
+                <li class=""><a class="tab-toggle" href="related.htm">Related projects</a></li>
+                <li class=""><a class="tab-toggle" href="source.htm">Source code</a></li>
+                <li class=""><a class="tab-toggle" href="funding.htm">Funding and support</a></li>
+                <li class=""><a class="tab-toggle" href="contact.htm">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <!--content for each tab -->
+          <div class="tab-content col-xs-9">
+            <div class="my-tab-pane active" id="what-is-pepper">
+  <div class="content">
+    <div class="descriptive">
+      <h3>Overview: what is Pepper?</h3>
+
+      <p>Pepper is an academic research project whose goal is to make
+      verified computation
+      practical. By verified computation (which is sometimes also called
+      &ldquo;verifiable computation&rdquo;), we mean a system that implements
+      the following picture:
+
+      </p>
+      <div class="image-container">
+        <img id="overview" class="image-center" src="overview.png" alt="Overview of Pepper" />
+      </div>
+
+      <p>One motivation is <i>cloud computing</i> (more
+      generally, <i>third-party computing</i>).
+      These environments bring:
+      </p>
+      <ul>
+          <li>Issues of <i>scale</i>: with hundreds of
+          thousands or millions of machines, correct and
+          unfailing execution in all cases seems
+          unlikely.</li>
+          <li>Issues of <i>trust</i>: the computation &ldquo;provider&rdquo; and the &ldquo;consumer&rdquo; are
+          different entities.</li>
+      </ul> 
+
+      <!--<p>Thus, we don't want to make any assumptions
+      about the performing computer, but we still want to
+      give a guarantee to the delegating computer that the
+      computation was done correctly.</p>-->
+
+      <p>Goal: A system that is</p>
+
+      <ol>
+          <li><b>Comprehensive</b> -- the
+          system makes no assumptions about the behavior and capabilities of the performing computer other than cryptographic hardness.</li>
+        <li><b>General-purpose</b> -- not
+        specialized to a particular family of functions.</li>
+        <li><b>Practical</b> -- can be used for real problems.</li>
+      </ol>
+
+      <p>Prior work does not meet all three of these properties.</p>
+
+      <p>We approach this problem using deep results in cryptography and
+      complexity theory.  <a href="our-approach.htm">Here</a> is a high-level
+      description of the foundations of our approach.</p>
+    </div>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.js" ></script>
+    
+    
+  </body>
+</html>
